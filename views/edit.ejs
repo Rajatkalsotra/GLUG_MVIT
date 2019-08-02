@@ -1,0 +1,70 @@
+<% include ./partial/header %>
+<br><br><br>
+
+    <div id="contact" class="paddsection">
+      <div class="container">
+        <div class="contact-block1">
+            <div class="jumbotron">
+                <div class="container">
+                <h2 class="mb-30">Edit the Event</h2>
+                  <form action="/events/<%= event.id %>?_method=PUT" method="POST" role="form" class="contactForm">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="text" name="event[name]" class="form-control" value="<%= event.name %>" id="name"  required="required" />  
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="text" name="event[org]" class="form-control" value="<%= event.org %>" id="name"  required="required" />  
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="email" name="event[email]" class="form-control" value="<%= event.email %>" id="name"  required="required" />
+                          </div>  
+                      </div> 
+                       <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="date" name="event[date]" class="form-control" id="date" value="<%= event.date %>"  required="required"/>     
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="time" name="event[time]" class="form-control" id="time" value="<%= event.time %>"  required="required"/>     
+                        </div>
+                      </div>
+                
+                      <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <textarea name="event[desc]" class="form-control" rows="6" id="desc" required="required" /><%= event.desc %></textarea>  
+                        </div>
+                      </div> 
+                        <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="text" name="event[phone]" class="form-control" value="<%= event.phone %>" id="phone"  required="required"/>     
+                        </div>
+                      </div>
+                       <div class="col-lg-12">
+                        <div class="form-group contact-block1">
+                          <input type="text" name="event[venue]" class="form-control" value="<%= event.venue %>"
+                          id="venue"  required="required"/>     
+                        </div>
+                      </div>
+                     
+                      
+                      <div class="col-lg-5">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                  
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<% include ./partial/footer %>

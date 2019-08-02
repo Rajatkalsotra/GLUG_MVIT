@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+  <title>GLUG Mvit</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Glug,mvit,bangalore" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <!--<link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+</script>
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/" class="scrollto"><img src="/img/logo.png" alt="" class="img-fluid"><span>GLUG MVIT</span></a></h1>
+        <a href="#header" class="scrollto"></a>
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+           <li><a href="https://blog.glugmvit.com/">Blog</a></li>
+           <li><a href="/events">Events</a></li>
+          <li><a href="/author">Our Team</a></li>
+          <% if(!user){ %>
+              <li class="active">
+                    <a href="/login">Login</a>
+              </li>
+              <li>
+                    <a href="/register">Signup</a>
+              </li>
+          <% }else{ %>
+            <li>
+                  <a href="/logout">Logout</a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+      <br><br><br>
+        
+    </div>
+
+  </header>
+<br><br><br>
+
+    <div id="contact" class="paddsection">
+      <div class="container">
+        <div class="contact-block1">
+            <div class="jumbotron">
+                <div class="container">
+                    <h2 class="mb-30 align-center">SIGN IN</h2>
+                    <form action="/login" method="POST" role="form" class="contactForm">
+                      <div class="row">
+                        
+                        <div class="col-lg-12">
+                          <div class="form-group contact-block1">
+                            <input type="email" name="email" class="form-control" id="name" placeholder="Your Email" required="required" />
+                            </div>  
+                        </div>
+                       
+                        <div class="col-lg-12">
+                          <div class="form-group contact-block1">
+                            <input type="password" name="password" class="form-control" id="name" placeholder="PASSWORD" required="required"/>     
+                          </div>
+                        </div>
+                        <p><input type="checkbox" name="terms" style="margin-left: 19px;" required="required"> I accept the Terms and Conditions</p>
+                        <div class="col-lg-12 align-center">
+                          <input type="submit" class="btn btn-primary " value="Submit">
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<% include ./partial/footer %>
